@@ -1,45 +1,24 @@
 package com.example.myapplication2.app;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
-    private TextView text;
-    private Button button;
-
+public class SencondActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        text = (TextView) findViewById(R.id.text);
-        button = (Button) findViewById(R.id.button);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text.setTextColor(getResources().getColor(R.color.red));
-                Intent intent = new Intent(MainActivity.this,SencondActivity.class);
-                startActivity(intent);
-
-
-            }
-        });
+        setContentView(R.layout.activity_sencond);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_sencond, menu);
         return true;
     }
 
